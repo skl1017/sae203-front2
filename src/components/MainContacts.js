@@ -11,14 +11,26 @@ export default function MainContacts() {
     const [url, setUrl] = useState("http://127.0.0.1:8000/contacts/?")
 
     const fetchContacts = async () => {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+       
+            },
+        
+        });
         const data = await response.json();
         setContacts(data);
         console.log(data);
     }
     
     const fetchTags = async()=>{
-        const reponse = await fetch('http://127.0.0.1:8000/tags/');
+        const reponse = await fetch('http://127.0.0.1:8000/tags/',{
+            method: 'GET',
+            headers: {
+   
+            },
+        
+        });
         const data = await reponse.json();
         setTags(data);
         console.log(data);

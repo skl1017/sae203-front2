@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(227,196,238);
+background: linear-gradient(58deg, rgba(227,196,238,1) 0%, rgba(114,132,255,1) 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.xxl{
+  font-size: 120px;
+}
+
+#root{
+  height: 100%;
+}
+.App{
+  height: 100%;
+  
+}
+.gradient{
+  background: rgb(227,196,238);
+background: linear-gradient(324deg, rgba(227,196,238,1) 0%, rgba(114,132,255,1) 100%);
 }
