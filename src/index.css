@@ -28,3 +28,8 @@ code {
   background: rgb(161,147,165);
   background: linear-gradient(22deg, rgba(161,147,165,1) 0%, rgba(217,90,33,1) 100%);
 }
+
+
+.fill{
+  font-variation-settings: 'FILL' 1;
+}
