@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Installer les dépendances
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Assurez vous d'avoir localement installé le gestionnaire de paquets "npm"
+Les dépendances sont inscrites dans le fichier package.json, pour toutes les installer : 
+### `npm install`
 
 ## Available Scripts
 
