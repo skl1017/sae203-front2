@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Contact from './components/Contact';
 import MainContacts from './components/MainContacts';
 import AddContact from './components/AddContact'
+import MainTags from './components/MainTags';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Header/>
     <Routes>
       <Route path="/" element={<MainContacts />} />
-      <Route path="/tags" element={<h1>Tags</h1>} />
+      <Route path="/tags" element={<MainTags/>} />
       <Route path="/contacts/:id" element={<Contact/>} />
       <Route path="/addContact" element={<AddContact/>}/>
     </Routes>
