@@ -60,6 +60,19 @@ export default function ContactInfo(props) {
         });
     }
 
+    const handleDelete = async()=>{
+        const response = await fetch('http://127.0.0.1:8000/contacts/'+id
+        ,{
+            method: 'DELETE',
+        });
+        const data = await response.json();
+        console.log(data);
+        window.location.href = '/';
+    }
+
+    
+    
+
 
 
     return (
@@ -69,6 +82,7 @@ export default function ContactInfo(props) {
                 <div className='p-10 flex flex-col bg-white rounded-xl gradient-bg mt-12 sm:w-96 w-72'>
                     <div className='flex items-center flex-col'>
                         <div className='flex w-full justify-end'><span className="material-symbols-outlined cursor-pointer bg-orange-500 text-white p-3 rounded-full" onClick={() => {toggleEditMode() }}>{editMode ? 'done'  : 'edit'}</span></div>
+
                         <span className="material-symbols-outlined xxl">account_circle</span>
                         <div className='flex justify-center flex-col sm:flex-row items-center mt-3 w-full sm:w-3/4 gap-2 my-6'>
                             {editMode ? <input onChange={handleChangeForm} className='p-1 flex w-1/2 mx-auto bg-white bg-opacity-30 border-b-2 text-xl' name='prenom' value={data.prenom}></input>
@@ -95,6 +109,7 @@ export default function ContactInfo(props) {
                             </ul>
                         </div>
                     )}
+                    <div className='w-full flex justify-center'><button onClick={handleDelete} className=' material-symbols-outlined w-16 bg-orange-500 text-black p-2 rounded mt-6'>delete</button></div>
                 </div>
             
             
